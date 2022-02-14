@@ -4,7 +4,7 @@
   "description": "Projet OPENCLASSROOM P3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch P3_02_Style.scss P3_03_Style.css"
   },
   "repository": {
     "type": "git",

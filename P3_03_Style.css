@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400;500&display=swap");
+/* WILDCARD */
+*,
+::before ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", "sans-serif";
+}
+
+/* HEADER */
+header {
+  font-family: "Shrikhand", "cursive";
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
+}
+
+/* MAIN */
+main .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+main .city i {
+  font-size: 1.3rem;
+}
+
+/* EXPLORER */
+.explorer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.explorer h2 {
+  font-size: 1.5rem;
+}
+
+.explorer p {
+  font-size: 300;
+  margin: 1.5rem 0;
+}
+
+.explorer button {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: all 200ms;
+  margin-top: -1rem;
+}
+
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/*# sourceMappingURL=P3_03_Style.css.map */
