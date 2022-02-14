@@ -1,0 +1,22 @@
+{
+  "name": "p3_03_package",
+  "version": "1.0.0",
+  "description": "Projet OPENCLASSROOM P3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yornos/P3_DAHMOUL_EMIR.git"
+  },
+  "author": "Emhyr Dahmoul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yornos/P3_DAHMOUL_EMIR/issues"
+  },
+  "homepage": "https://github.com/Yornos/P3_DAHMOUL_EMIR#readme",
+  "devDependencies": {
+    "sass": "^1.49.7"
+  }
+}
