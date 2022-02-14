@@ -5,20 +5,41 @@
 *, 
 ::before
 ::after 
-    {
+{
     box-sizing: border-box;  
-    }
+}
 
 body 
-    {
+{
     margin: 0px;
-    }
+    font-family: 'Roboto', "sans-serif";
+}
 
 /* HEADER */
 header 
-    {
+{
     font-family: 'Shrikhand', "cursive";
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: .3rem;
-    }
+    margin: 0;
+    position: relative;
+}
+
+/* MAIN */
+
+main .city 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+main .city i 
+{
+    font-size: 1.3rem;
+}
