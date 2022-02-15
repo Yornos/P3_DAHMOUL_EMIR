@@ -11,18 +11,16 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
-/* HEADER */
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   padding: 0.3rem;
   margin: 0;
   position: relative;
 }
 
-/* MAIN */
-main .city {
+.city {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,27 +29,22 @@ main .city {
   text-align: center;
   padding: 0.5rem;
 }
-
-main .city i {
+.city i {
   font-size: 1.3rem;
 }
 
-/* EXPLORER */
 .explorer {
   padding: 2rem;
   text-align: center;
   background-color: #fafafa;
 }
-
 .explorer h2 {
   font-size: 1.5rem;
 }
-
 .explorer p {
   font-size: 300;
   margin: 1.5rem 0;
 }
-
 .explorer button {
   color: white;
   font-weight: 500;
@@ -64,10 +57,31 @@ main .city i {
   transition: all 200ms;
   margin-top: -1rem;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
 
-/*# sourceMappingURL=P3_03_Style.css.map */
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  background-color: #f6f6f6;
+  padding: 1 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+
+/*# sourceMappingURL=P3_02_Style.css.map */
