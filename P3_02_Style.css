@@ -42,7 +42,7 @@ header {
   font-size: 1.5rem;
 }
 .explorer p {
-  font-size: 300;
+  font-size: 25px;
   margin: 1.5rem 0;
 }
 .explorer button {
@@ -63,20 +63,29 @@ header {
   cursor: pointer;
 }
 
-.tuto {
+.global-tuto {
   padding: 1rem;
+  margin-bottom: 2rem;
+}
+.global-tuto .tuto {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
   counter-reset: steps;
 }
-.tuto ol {
+.global-tuto .tuto h2 {
+  padding-left: 1.5rem;
+}
+.global-tuto .tuto ol {
   display: flex;
   gap: 2rem;
 }
 @media (max-width: 1024px) {
-  .tuto ol {
+  .global-tuto .tuto ol {
     flex-direction: column;
   }
 }
-.tuto li {
+.global-tuto .tuto li {
   position: relative;
   list-style-type: none;
   background-color: #f6f6f6;
@@ -85,7 +94,7 @@ header {
   border-radius: 1rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-.tuto li::before {
+.global-tuto .tuto li::before {
   content: counter(steps);
   counter-increment: steps;
   color: #f6f6f6;
@@ -99,14 +108,62 @@ header {
   bottom: 1rem;
   left: -1rem;
 }
-.tuto li:hover {
+.global-tuto .tuto li:hover {
   transform: scale(1.02);
   cursor: pointer;
 }
-.tuto li i.fas {
+.global-tuto .tuto li i.fas {
   margin-right: 1rem;
   color: #7e7e7e;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+.global-menu {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+.global-menu .menus {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  background-color: #f6f6f6;
+}
+.global-menu .menus h2 {
+  margin-bottom: 2rem;
+}
+.global-menu .menus .menus__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .global-menu .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.global-menu .menus .card {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  color: inherit;
+  display: block;
+}
+.global-menu .menus .card .card__image {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+.global-menu .menus .card .card__title {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=P3_02_Style.css.map */

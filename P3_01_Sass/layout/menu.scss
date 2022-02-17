@@ -1,0 +1,60 @@
+@use "../utils/colors.scss";
+@use "../utils/variables.scss";
+@use "../utils/box-shadow.scss";
+.global-menu {
+    background-color: #f6f6f6;
+    padding: 2rem 1rem;
+    
+    .menus 
+    {
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+        background-color: colors.$white;
+        h2 
+        {
+            margin-bottom: 2rem;
+        }
+        
+        .menus__cards 
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            @media (max-width:variables.$breakpoint) 
+            {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        .card
+        {
+            background-color: #fff;
+            border-radius: 1rem;
+            position: relative;
+            text-decoration: none;
+            @include box-shadow.base-shadow;
+            color: inherit;
+            display: block;
+            
+            & .card__image
+            {
+                height: 12rem;
+                width: 100%;
+                border: 0 solid transparent;
+                border-radius: 1rem 1rem 0 0;
+                object-fit: cover;
+            }
+            
+            & .card__title
+            {
+                font-size: 1.17em;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold
+            }
+        }
+    }   
+}
