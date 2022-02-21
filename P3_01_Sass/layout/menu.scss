@@ -29,9 +29,12 @@
                 grid-template-columns: repeat(1, 1fr);
             }
 
-            .new
+            .new:hover
             {
                 position: relative;
+                    background-blend-mode: lighten;
+                    @include mixins.menu-shadow;
+                    border-radius: 20px;    
             }
 
             .new::before
