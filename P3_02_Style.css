@@ -11,6 +11,11 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
@@ -85,6 +90,9 @@ header {
     flex-direction: column;
   }
 }
+.global-tuto .tuto ol li:hover .tuto__icon {
+  color: #9356DC;
+}
 .global-tuto .tuto li {
   position: relative;
   list-style-type: none;
@@ -111,6 +119,7 @@ header {
 .global-tuto .tuto li:hover {
   transform: scale(1.02);
   cursor: pointer;
+  background: #f7f1fc;
 }
 .global-tuto .tuto li i.fas {
   margin-right: 1rem;
@@ -118,9 +127,26 @@ header {
   font-size: 1rem;
 }
 
+@keyframes blinking {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .global-menu {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
+  margin-bottom: 2rem;
 }
 .global-menu .menus {
   max-width: 1280px;
@@ -140,6 +166,24 @@ header {
   .global-menu .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.global-menu .menus .menus__cards .new {
+  position: relative;
+}
+.global-menu .menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5.5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 10%;
+  animation: blinking 2s linear infinite;
+  cursor: pointer;
 }
 .global-menu .menus .card {
   background-color: #fff;
@@ -164,6 +208,52 @@ header {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+.global-menu .menus .card__description {
+  padding: 10px 15px 15px 15px;
+}
+.global-menu .menus .card__description h3, .global-menu .menus .card p {
+  margin: 0.4rem;
+}
+.global-menu .menus .card i {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(320%);
+}
+.global-menu .menus .card__description .heart:hover {
+  cursor: pointer;
+  animation: heart 3s infinite;
+  background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc, #cf64dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #332f2f;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 60px;
+}
+footer img {
+  height: 1.3rem;
+  filter: invert(100%);
+}
+footer ul, footer li {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer .fas {
+  filter: invert(100%);
+  margin-bottom: 0.4rem;
+  margin-right: 0.4rem;
+}
+footer ul {
+  margin: 20px auto;
 }
 
 /*# sourceMappingURL=P3_02_Style.css.map */

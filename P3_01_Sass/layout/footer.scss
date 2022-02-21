@@ -1,0 +1,34 @@
+@use "./../utils/colors.scss";
+
+footer
+{
+    background-color: colors.$darkgrey;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+
+    & img
+    {
+        height: 1.3rem;
+        filter: invert(100%);   
+    }
+
+    & ul, li
+    {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    & .fas
+    {
+        filter: invert(100%);
+        margin-bottom: 0.4rem;
+        margin-right: 0.4rem;
+    }
+
+    & ul
+    {
+        margin: 20px auto;
+    }
+}

@@ -1,5 +1,5 @@
-@use "../utils/zoom.scss";
-@use "../utils/box-shadow.scss";
+
+@use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
 
@@ -9,14 +9,17 @@
     
     .tuto 
     {
+        
         max-width: 1280px;
-    margin: auto;
-    position: relative;
-    counter-reset: steps;
+        margin: auto;
+        position: relative;
+        counter-reset: steps;
+
     & h2 
     {
         padding-left: 1.5rem;
     }
+
     & ol 
     {
         display: flex;
@@ -24,6 +27,11 @@
         @media (max-width: 1024px)
         {
             flex-direction: column;
+        }
+
+    & li:hover .tuto__icon 
+        {
+            color: #9356DC;
         }
     }
     
@@ -50,10 +58,11 @@
         padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include box-shadow.base-shadow;
+        @include mixins.base-shadow;
         &:hover 
         {
-            @include zoom.transform-zoom
+            @include mixins.transform-zoom;
+            background: #f7f1fc;
         }
         
         & i.fas 

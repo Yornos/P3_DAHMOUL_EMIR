@@ -1,9 +1,12 @@
 @use "../utils/colors.scss";
 @use "../utils/variables.scss";
-@use "../utils/box-shadow.scss";
-.global-menu {
+@use "../utils/mixins.scss";
+@use "../utils/keyframe.scss";
+.global-menu 
+{
     background-color: #f6f6f6;
     padding: 2rem 1rem;
+    margin-bottom: 2rem;
     
     .menus 
     {
@@ -25,6 +28,28 @@
             {
                 grid-template-columns: repeat(1, 1fr);
             }
+
+            .new
+            {
+                position: relative;
+            }
+
+            .new::before
+            {
+                content: "Nouveau";
+                position: absolute;
+                height: 2rem;
+                width: 5.5rem;
+                background-color: colors.$lightgreen;
+                color: darken($color: colors.$lightgreen, $amount: 50%);
+                display: grid;
+                place-items: center;
+                right: 1rem;
+                top:1rem;
+                border-radius: 10%;
+                animation: blinking 2s linear infinite;
+                cursor: pointer;
+            }
         }
         
         .card
@@ -33,7 +58,7 @@
             border-radius: 1rem;
             position: relative;
             text-decoration: none;
-            @include box-shadow.base-shadow;
+            @include mixins.base-shadow;
             color: inherit;
             display: block;
             
@@ -45,7 +70,7 @@
                 border-radius: 1rem 1rem 0 0;
                 object-fit: cover;
             }
-            
+
             & .card__title
             {
                 font-size: 1.17em;
@@ -55,6 +80,36 @@
                 margin-inline-end: 0px;
                 font-weight: bold
             }
+
+            &__description
+            {
+                padding: 10px 15px 15px 15px;
+            }
+
+            &__description h3, p
+            {
+                margin: 0.4rem;
+            }
+            
+            i
+            {
+                font-size: 1.6rem;
+                position: absolute;
+                right: 1rem;
+                top:50%;
+                transform: translateY(320%);
+            }
+
+            &__description .heart:hover 
+            {
+                cursor: pointer;
+                animation: heart 3s infinite;
+                background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc , #cf64dc, #ff79da );
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+            }
         }
-    }   
+    }  
 }

@@ -1,10 +1,10 @@
-@use "../utils/box-shadow.scss";
+@use "../utils/mixins.scss";
 
 header 
 {
     font-family: 'Shrikhand', "cursive";
     text-align: center;
-    @include box-shadow.base-shadow;
+    @include mixins.base-shadow;
     padding: .3rem;
     margin: 0;
     position: relative;
