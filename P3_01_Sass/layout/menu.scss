@@ -43,8 +43,8 @@
                 position: absolute;
                 height: 2rem;
                 width: 5.5rem;
-                background-color: colors.$lightgreen;
-                color: darken($color: colors.$lightgreen, $amount: 50%);
+                background-color: colors.$tertiary;
+                color: darken($color: colors.$tertiary, $amount: 50%);
                 display: grid;
                 place-items: center;
                 right: 1rem;
@@ -103,15 +103,9 @@
                 transform: translateY(320%);
             }
 
-            &__description .heart:hover 
+            &__description .heart:hover
             {
-                cursor: pointer;
-                animation: heart 3s infinite;
-                background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc , #cf64dc, #ff79da );
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bold;
+                @include mixins.heart-hover
             }
         }
     }  

@@ -1,7 +1,7 @@
-@mixin transform-zoom
+
+@mixin transform-zoom($zoom-level: 1.02, $transformation: null) 
 {
-    transform: scale(1.02);
-    cursor: pointer;
+    transform: $transformation scale($zoom-level);
 }
 
 @mixin base-shadow
@@ -13,3 +13,31 @@
 {
     box-shadow: 2px 6px 20px #999999;
 }
+
+@mixin heart-hover 
+{
+    cursor: pointer;
+    animation: heart 3s infinite;
+    background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc , #cf64dc, #ff79da );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;  
+}
+
+@mixin font-awesome($font-weight: 400) 
+{
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+}
+
+  
+  
+  
+
