@@ -6,6 +6,7 @@
 .global-tuto{
     padding: 1rem;
     margin-bottom: 2rem;
+    margin-left: -2rem;
     
     .tuto 
     {
@@ -17,7 +18,7 @@
 
     & h2 
     {
-        padding-left: 1.5rem;
+        padding-left: 2.5rem;
     }
 
     & ol 
@@ -28,6 +29,7 @@
         @media (max-width: 1024px)
         {
             flex-direction: column;
+            margin: 0.5rem;
         }
 
     & li:hover .tuto__icon 
@@ -55,6 +57,7 @@
             left: -1 * variables.$tuto-bullet-height;   
         }
         list-style-type: none;
+        font-weight: 500;
         background-color: colors.$white;
         padding: 1.5rem 2rem;
         flex-grow: 1;

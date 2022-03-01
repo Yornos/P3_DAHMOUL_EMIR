@@ -24,6 +24,11 @@ header {
   margin: 0;
   position: relative;
 }
+header h2 {
+  font-weight: 500;
+  font-size: larger;
+  margin-right: 1rem;
+}
 
 .city {
   display: flex;
@@ -37,6 +42,11 @@ header {
 .city i {
   font-size: 1.3rem;
 }
+.city h2 {
+  font-weight: 500;
+  font-size: larger;
+  margin-right: 1rem;
+}
 
 .explorer {
   padding: 2rem;
@@ -48,6 +58,7 @@ header {
 }
 .explorer p {
   font-size: 25px;
+  font-weight: 100;
   margin: 1.5rem 0;
 }
 .explorer button {
@@ -68,9 +79,32 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 3;
+  animation: disappear 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #99E2D0;
+  border-radius: 60%;
+  animation: spin 3s infinite linear;
+}
+
 .global-tuto {
   padding: 1rem;
   margin-bottom: 2rem;
+  margin-left: -2rem;
 }
 .global-tuto .tuto {
   max-width: 1280px;
@@ -79,7 +113,7 @@ header {
   counter-reset: steps;
 }
 .global-tuto .tuto h2 {
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
 }
 .global-tuto .tuto ol {
   display: flex;
@@ -89,6 +123,7 @@ header {
 @media (max-width: 1024px) {
   .global-tuto .tuto ol {
     flex-direction: column;
+    margin: 0.5rem;
   }
 }
 .global-tuto .tuto ol li:hover .tuto__icon {
@@ -97,6 +132,7 @@ header {
 .global-tuto .tuto li {
   position: relative;
   list-style-type: none;
+  font-weight: 500;
   background-color: #f6f6f6;
   padding: 1.5rem 2rem;
   flex-grow: 1;
@@ -145,10 +181,25 @@ header {
 }
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
     transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 .global-menu {
@@ -257,9 +308,9 @@ footer img {
 footer ul, footer li {
   list-style-type: none;
   padding-left: 0;
+  color: #fff;
 }
 footer .fas {
-  filter: invert(100%);
   margin-bottom: 0.4rem;
   margin-right: 0.4rem;
 }
@@ -320,6 +371,7 @@ header i {
 
 .resto-main {
   padding: 0 1rem;
+  margin-bottom: -4rem;
 }
 
 .menus {
@@ -391,6 +443,7 @@ header i {
 }
 .menus .menus__category .menu-item .menu-item__description p {
   margin-top: -1rem;
+  font-size: smaller;
 }
 .menus .menus__category .menu-item .menu-item__check {
   display: grid;
