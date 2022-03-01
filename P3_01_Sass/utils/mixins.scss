@@ -25,7 +25,43 @@
     font-weight: bold;  
 }
 
-@mixin font-awesome($font-weight: 400) 
+
+@mixin quarterspin
+{
+    @keyframes quarterspin
+    {
+        0% {
+            transform: rotate(-270deg);
+        }
+        
+        100% {
+            transform: rotate(0);
+        }
+    }    
+}
+
+@mixin base-button
+{
+    
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    transition: all 200ms;
+    margin-top: -1rem;
+    &:hover
+    {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+    cursor: pointer;
+    @include base-shadow;       
+}
+
+@mixin fontawesome($font-weight: 400) 
 {
     display: inline-block;
     position: absolute;
@@ -37,7 +73,4 @@
     font-weight: $font-weight;
 }
 
-  
-  
-  
 

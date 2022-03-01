@@ -2,9 +2,20 @@
 @use "../utils/colors.scss";
 @use "../utils/variables.scss";
 
-body
+
+header i 
 {
-    background-color: #f6f6f6; 
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
 }
 
 .banner img 
@@ -31,7 +42,7 @@ body
         
       & .far
         {
-        padding-left: 1rem;
+        padding-left: 1.5rem;
         }
     }
 }
@@ -68,6 +79,7 @@ body
       font-weight: 400;
       position: relative;
       margin-bottom: 1rem;
+      margin-left: 1.5rem;
 
       &::after 
       {
@@ -99,7 +111,7 @@ body
         background-color: white;
         border-radius: 1rem;
         overflow: hidden;
-        margin: 0.5rem;
+        margin: 1.2rem;
         @include mixins.base-shadow;
         animation: appear 1s;
         animation-fill-mode: both;
@@ -115,6 +127,8 @@ body
         .menu-item__description 
         {
           padding: 1rem;
+          margin-top: -1rem;
+          margin-bottom: -1rem;
           overflow: hidden;
           h4,
           p 
@@ -122,6 +136,10 @@ body
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+          }
+          p
+          {
+            margin-top: -1rem;
           }
         }
         .menu-item__check 
@@ -137,7 +155,7 @@ body
           transition: margin-right 0.5s;
           i 
           {
-            $size: 1rem;
+            $size: 1.5rem;
             display: grid;
             place-items: center;
             background: white;
@@ -154,9 +172,24 @@ body
           {
             margin-right: 0;
           }
+          i 
+          {
+            @include mixins.quarterspin;
+            animation: quarterspin 0.5s ease-in-out;
+          }
         }
       }
     }
   }
 
+nav.order
+{
+  height: 10vh;
+  display: grid;
+  place-items: center;
+  button
+  {
+    @include mixins.base-button  
+  }
+}
         

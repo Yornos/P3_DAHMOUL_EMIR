@@ -24,6 +24,7 @@
     {
         display: flex;
         gap: 2rem;
+        cursor: pointer;
         @media (max-width: 1024px)
         {
             flex-direction: column;

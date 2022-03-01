@@ -57,15 +57,15 @@ header {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: all 200ms;
   margin-top: -1rem;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
-  cursor: pointer;
 }
 
 .global-tuto {
@@ -84,6 +84,7 @@ header {
 .global-tuto .tuto ol {
   display: flex;
   gap: 2rem;
+  cursor: pointer;
 }
 @media (max-width: 1024px) {
   .global-tuto .tuto ol {
@@ -142,37 +143,45 @@ header {
     opacity: 1;
   }
 }
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .global-menu {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: -4rem;
 }
-.global-menu .menus {
+.global-menu .choice {
   max-width: 1280px;
   margin: auto;
   position: relative;
   background-color: #f6f6f6;
 }
-.global-menu .menus h2 {
+.global-menu .choice h2 {
   margin-bottom: 2rem;
 }
-.global-menu .menus .menus__cards {
+.global-menu .choice .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 @media (max-width: 1024px) {
-  .global-menu .menus .menus__cards {
+  .global-menu .choice .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.global-menu .menus .menus__cards .new:hover {
+.global-menu .choice .menus__cards .new:hover {
   position: relative;
   background-blend-mode: lighten;
   box-shadow: 2px 6px 20px #999999;
   border-radius: 20px;
 }
-.global-menu .menus .menus__cards .new::before {
+.global-menu .choice .menus__cards .new::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -187,7 +196,7 @@ header {
   animation: blinking 2s linear infinite;
   cursor: pointer;
 }
-.global-menu .menus .card {
+.global-menu .choice .card {
   background-color: #fff;
   border-radius: 1rem;
   position: relative;
@@ -196,14 +205,14 @@ header {
   color: inherit;
   display: block;
 }
-.global-menu .menus .card .card__image {
+.global-menu .choice .card .card__image {
   height: 12rem;
   width: 100%;
   border: 0 solid transparent;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 }
-.global-menu .menus .card .card__title {
+.global-menu .choice .card .card__title {
   font-size: 1.17em;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -211,20 +220,20 @@ header {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-.global-menu .menus .card__description {
+.global-menu .choice .card__description {
   padding: 10px 15px 15px 15px;
 }
-.global-menu .menus .card__description h3, .global-menu .menus .card p {
+.global-menu .choice .card__description h3, .global-menu .choice .card p {
   margin: 0.4rem;
 }
-.global-menu .menus .card i {
+.global-menu .choice .card i {
   font-size: 1.6rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(320%);
 }
-.global-menu .menus .card__description .heart:hover {
+.global-menu .choice .card__description .heart:hover {
   cursor: pointer;
   animation: heart 3s infinite;
   background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc, #cf64dc, #ff79da);
@@ -239,7 +248,7 @@ footer {
   padding-left: 20px;
   padding-top: 40px;
   padding-bottom: 20px;
-  margin-top: 60px;
+  margin-top: 65px;
 }
 footer img {
   height: 1.3rem;
@@ -258,8 +267,18 @@ footer ul {
   margin: 20px auto;
 }
 
-body {
-  background-color: #f6f6f6;
+header i {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
 }
 
 .banner img {
@@ -287,7 +306,7 @@ body {
   font-weight: bold;
 }
 .resto__title h2 .far {
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .resto-main {
@@ -318,6 +337,7 @@ body {
   font-weight: 400;
   position: relative;
   margin-bottom: 1rem;
+  margin-left: 1.5rem;
 }
 .menus h3::after {
   content: "";
@@ -336,7 +356,7 @@ body {
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
-  margin: 0.5rem;
+  margin: 1.2rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   animation: appear 1s;
   animation-fill-mode: both;
@@ -359,6 +379,8 @@ body {
 }
 .menus .menus__category .menu-item .menu-item__description {
   padding: 1rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
   overflow: hidden;
 }
 .menus .menus__category .menu-item .menu-item__description h4,
@@ -366,6 +388,9 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.menus .menus__category .menu-item .menu-item__description p {
+  margin-top: -1rem;
 }
 .menus .menus__category .menu-item .menu-item__check {
   display: grid;
@@ -381,8 +406,8 @@ body {
   display: grid;
   place-items: center;
   background: white;
-  height: 1rem;
-  width: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 1rem;
   color: #99E2D0;
 }
@@ -391,6 +416,40 @@ body {
 }
 .menus .menus__category .menu-item:hover .menu-item__check {
   margin-right: 0;
+}
+.menus .menus__category .menu-item:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+nav.order {
+  height: 10vh;
+  display: grid;
+  place-items: center;
+}
+nav.order button {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: all 200ms;
+  margin-top: -1rem;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+nav.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=P3_02_Style.css.map */

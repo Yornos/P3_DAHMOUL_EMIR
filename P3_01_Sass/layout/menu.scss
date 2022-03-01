@@ -2,13 +2,14 @@
 @use "../utils/variables.scss";
 @use "../utils/mixins.scss";
 @use "../utils/keyframe.scss";
+
 .global-menu 
 {
-    background-color: #f6f6f6;
+    background-color: colors.$white;
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: -4rem;
     
-    .menus 
+    .choice
     {
         max-width: 1280px;
         margin: auto;
@@ -19,7 +20,7 @@
             margin-bottom: 2rem;
         }
         
-        .menus__cards 
+        .menus__cards
         {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -57,7 +58,7 @@
         
         .card
         {
-            background-color: #fff;
+            background-color: colors.$lightergrey;
             border-radius: 1rem;
             position: relative;
             text-decoration: none;
