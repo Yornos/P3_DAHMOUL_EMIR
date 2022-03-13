@@ -226,7 +226,7 @@ header h2 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.global-menu .choice .menus__cards .new:hover {
+.global-menu .choice .menus__cards .card:hover {
   position: relative;
   background-blend-mode: lighten;
   box-shadow: 2px 6px 20px #999999;
@@ -247,7 +247,7 @@ header h2 {
   animation: blinking 2s linear infinite;
   cursor: pointer;
 }
-.global-menu .choice .card {
+.global-menu .choice .card:hover {
   background-color: #fff;
   border-radius: 1rem;
   position: relative;
@@ -255,15 +255,18 @@ header h2 {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   color: inherit;
   display: block;
+  background-blend-mode: lighten;
+  box-shadow: 2px 6px 20px #999999;
+  border-radius: 20px;
 }
-.global-menu .choice .card .card__image {
+.global-menu .choice .card:hover .card__image {
   height: 12rem;
   width: 100%;
   border: 0 solid transparent;
   border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 }
-.global-menu .choice .card .card__title {
+.global-menu .choice .card:hover .card__title {
   font-size: 1.17em;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -271,20 +274,20 @@ header h2 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-.global-menu .choice .card__description {
+.global-menu .choice .card:hover__description {
   padding: 10px 15px 15px 15px;
 }
-.global-menu .choice .card__description h3, .global-menu .choice .card p {
+.global-menu .choice .card:hover__description h3, .global-menu .choice .card:hover p {
   margin: 0.4rem;
 }
-.global-menu .choice .card i {
+.global-menu .choice .card:hover i {
   font-size: 1.6rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(320%);
 }
-.global-menu .choice .card__description .heart:hover {
+.global-menu .choice .card:hover__description .heart:hover {
   cursor: pointer;
   animation: heart 3s infinite;
   background: linear-gradient(to bottom, #9356dc, #9356dc, #b35cdc, #cf64dc, #ff79da);
